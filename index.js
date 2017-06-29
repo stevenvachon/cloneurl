@@ -1,12 +1,7 @@
 "use strict";
-const URL = require("universal-url").URL;
+const {URL} = require("universal-url");
 
-
-
-function cloneURL(url)
-{
-	return new URL(url);
-}
+const cloneURL = url => new URL(url);
 
 
 

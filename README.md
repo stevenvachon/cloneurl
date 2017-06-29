@@ -1,4 +1,4 @@
-# cloneurl [![NPM Version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][david-image]][david-url]
+# cloneurl [![NPM Version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Monitor][greenkeeper-image]][greenkeeper-url]
 
 > Clone a WHATWG [`URL`](https://developer.mozilla.org/en/docs/Web/API/URL) instance.
 
@@ -8,7 +8,7 @@ This module's browser version contains no `URL` shim.
 
 ## Installation
 
-[Node.js](http://nodejs.org/) `>= 4` is required. To install, type this at the command line:
+[Node.js](http://nodejs.org/) `>= 6` is required. To install, type this at the command line:
 ```shell
 npm install cloneurl
 ```
@@ -33,5 +33,5 @@ console.log(b.href === a.href);
 [npm-url]: https://npmjs.org/package/cloneurl
 [travis-image]: https://img.shields.io/travis/stevenvachon/cloneurl.svg
 [travis-url]: https://travis-ci.org/stevenvachon/cloneurl
-[david-image]: https://img.shields.io/david/stevenvachon/cloneurl.svg
-[david-url]: https://david-dm.org/stevenvachon/cloneurl
+[greenkeeper-image]: https://badges.greenkeeper.io/stevenvachon/cloneurl.svg
+[greenkeeper-url]: https://greenkeeper.io/
