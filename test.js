@@ -1,12 +1,12 @@
 "use strict";
-const expect = require("chai").expect;
+const {expect} = require("chai");
 
 
 
 describe("Node.js", function()
 {
 	const cloneURL = require("./");
-	const URL = require("universal-url").URL;
+	const {URL} = require("universal-url");
 
 
 
