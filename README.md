@@ -1,5 +1,7 @@
 # cloneurl [![NPM Version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][david-image]][david-url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/stevenvachon/cloneurl.svg)](https://greenkeeper.io/)
+
 > Clone a WHATWG [`URL`](https://developer.mozilla.org/en/docs/Web/API/URL) instance.
 
 
