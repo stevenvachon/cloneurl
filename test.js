@@ -4,14 +4,14 @@ const {expect} = require("chai");
 
 
 
-describe("Node.js", function()
+describe("Node.js", () =>
 {
 	const cloneURL = require("./");
 	const {URL} = require("universal-url");
 
 
 
-	it("works", function()
+	it("works", () =>
 	{
 		const org = new URL("http://domain/");
 		const cloned = cloneURL(org);
@@ -23,23 +23,39 @@ describe("Node.js", function()
 
 
 
-describe("Web Browser", function()
+describe("Web Browser", () =>
 {
-	const Nightmare = require("nightmare");
-	let browser;
+	const puppeteer = require("puppeteer");
+	let browser, page;
 
-
-
-	before(() => browser = new Nightmare({ nodeIntegration:false }).goto("about:blank").inject("js", "browser.js"));
-
-
-
-	it("works", function()
+	const openBrowser = () =>
 	{
-		return browser.evaluate( function()
+		return puppeteer.launch({ args: ["--no-sandbox"] })
+		.then(puppeteerInstance =>
 		{
-			var org = new URL("http://domain/");
-			var cloned = cloneURL(org);
+			browser = puppeteerInstance;
+			return puppeteerInstance.newPage();
+		})
+		.then(pageInstance =>
+		{
+			page = pageInstance;
+			return page.addScriptTag({ path: "browser.js" });
+		});
+	};
+
+
+
+	before(() => openBrowser());
+	after(() => browser.close());
+
+
+
+	it("works", () =>
+	{
+		return page.evaluate(() =>
+		{
+			const org = new URL("http://domain/");
+			const cloned = cloneURL(org);
 
 			// Returned data is serialized
 			return {
@@ -47,7 +63,7 @@ describe("Web Browser", function()
 				instanceofURL: cloned instanceof URL
 			};
 		})
-		.then( function(result)
+		.then(result =>
 		{
 			expect(result.instanceofURL).to.be.true;
 			expect(result.hrefsMatch).to.be.true;

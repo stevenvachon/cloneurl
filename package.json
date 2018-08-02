@@ -1,25 +1,24 @@
 {
   "name": "cloneurl",
   "description": "Clone any WHATWG URL instance.",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "MIT",
   "author": "Steven Vachon <contact@svachon.com> (https://www.svachon.com/)",
   "repository": "stevenvachon/cloneurl",
   "browser": "browser.js",
   "dependencies": {
-    "universal-url": "^1.0.0"
+    "universal-url": "^2.0.0"
   },
   "devDependencies": {
-    "chai": "^4.0.2",
-    "mocha": "^3.4.2",
-    "nightmare": "^2.10.0",
-    "xvfb-maybe": "~0.2.1"
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "puppeteer": "^1.10.0"
   },
   "engines": {
     "node": ">= 6"
   },
   "scripts": {
-    "test": "xvfb-maybe mocha test --reporter spec --check-leaks --bail"
+    "test": "mocha test --check-leaks --bail"
   },
   "files": [
     "browser.js",
