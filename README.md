@@ -30,7 +30,7 @@ console.log(b.href === a.href);
 
 
 [npm-image]: https://img.shields.io/npm/v/cloneurl.svg
-[npm-url]: https://npmjs.org/package/cloneurl
+[npm-url]: https://npmjs.com/package/cloneurl
 [travis-image]: https://img.shields.io/travis/stevenvachon/cloneurl.svg
 [travis-url]: https://travis-ci.org/stevenvachon/cloneurl
 [greenkeeper-image]: https://badges.greenkeeper.io/stevenvachon/cloneurl.svg
