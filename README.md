@@ -1,6 +1,6 @@
 # cloneurl [![NPM Version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Monitor][greenkeeper-image]][greenkeeper-url]
 
-> Clone a WHATWG [`URL`](https://developer.mozilla.org/en/docs/Web/API/URL) instance.
+> Clone a WHATWG [`URL`](https://mdn.io/URL) instance.
 
 
 This module's browser version contains no `URL` shim.
@@ -8,7 +8,7 @@ This module's browser version contains no `URL` shim.
 
 ## Installation
 
-[Node.js](http://nodejs.org/) `>= 6` is required. To install, type this at the command line:
+[Node.js](https://nodejs.org) `>= 6` is required. To install, type this at the command line:
 ```shell
 npm install cloneurl
 ```

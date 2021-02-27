@@ -18,7 +18,7 @@
     "node": ">= 6"
   },
   "scripts": {
-    "test": "mocha test.js --check-leaks --bail"
+    "test": "mocha test.js --bail --check-leaks"
   },
   "files": [
     "browser.js",
